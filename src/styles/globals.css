@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "futuristicregular";
+}
+
+.stats {
+    padding: 50px;
+}
+
+.flash {
+    animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+h1 {
+    color: #defe47;
+}
+
+@keyframes flash {
+    from {
+        color: #7700a6;
+    }
+    to {
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: black;
+    }
+}
+@font-face {
+    font-family: "futuristicregular";
+    src: url("futuristic-mrer-webfont.woff2") format("woff2"),
+        url("futuristic-mrer-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
